@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<head>
+
+    <script type="text/javascript" src="js/robot.js"></script>
+    <script type="text/javascript" src="js/maze.js"></script>
+    <script type="text/javascript" src="js/mazespace.js"></script>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/robotmazeinterface.js"></script>
+    <link type="text/css" rel="stylesheet" href="css/robotmazeinterface.css">
+    <link type="text/css" rel="stylesheet" href="css/font-awesome.css">
+    <link href='https://fonts.googleapis.com/css?family=Raleway:200' rel='stylesheet' type='text/css'>
+
+    <script>
+        m = new Maze(7,5);
+        m.setStart(1,1,"north");
+        m.setEnd(7,1);
+        m.setWall(1,1,"east");
+        m.setWall(1,3,"north");
+        m.setWall(2,1,"north");
+        m.setWall(2,2,"north");
+        m.setWall(2,4,"north");
+        m.setWall(2,3,"east");
+        m.setWall(3,2,"north");
+        m.setWall(3,4,"north");
+        m.setWall(3,1,"east");
+        m.setWall(3,2,"east");
+        m.setWall(3,1,"east");
+        m.setWall(3,4,"east");
+        m.setWall(4,2,"north");
+        m.setWall(4,3,"north");
+        m.setWall(4,3,"east");
+        m.setWall(4,5,"east");
+        m.setWall(5,1,"north");
+        m.setWall(5,2,"east");
+        m.setWall(5,4,"east");
+        m.setWall(6,1,"east");
+        m.setWall(6,2,"north");
+        m.setWall(6,3,"east");
+        m.setWall(6,4,"north");
+        m.setWall(7,3,"north");
+        m.setWall(7,4,"north");
+
+        r = new Robot();
+
+
+        var i = new RobotMazeInterface(r,m,"#page");       
+        $(document).ready(function() {
+            i.render();
+        });       
+
+    </script>
+</head>
+<body>
+
+ <div class='header'>
+    <h1> MOVE THAT TRUCK</h1>
+    <h3>Help this truck make his delivery on time by using the Left, Right & Move Forward buttons</h3>
+    <p>To begin, press the Place In Maze button</p>
+    <hr>
+ </div>
+
+  <div id="page">
+    Loading ...
+  </div>
+
+</body>
+</html>
