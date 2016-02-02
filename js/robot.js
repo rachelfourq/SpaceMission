@@ -46,29 +46,48 @@ Robot.prototype.turnLeft = function() {
 
 Robot.prototype.moveForward = function() {
 
-	if (!this.canMoveForward()) {
-		return false;
-	}
-	switch (this.orientation) {
-		case 'north':
-			this.y += 1;
-			break;
-		case 'east':
-			this.x += 1;
-			break;
-		case 'south':
-			this.y += 1;
-			break;
-		case 'west':
-			this.x += 1;
-			break;			
-	}
-	return true;
+    if (!this.canMoveForward()) {
+        return false;
+    }
+
+    switch (this.orientation) {
+        case "north":
+            this.y += 1;
+            break;
+        case "east":
+            this.x += 1;
+            break;
+        case "south":
+            this.y -= 1;
+            break;
+        case "west":
+            this.x -= 1;
+            break;
+    }
+    return true;
 }
 
 Robot.prototype.canMoveForward = function() {
-	if (!this.maze) {
-		return false;
-	}
-	return this.maze.canMove(this.x, this.y, this.orientation);
+    if (!this.maze) {
+        return false;
+    }
+    return this.maze.canMove(this.x, this.y, this.orientation);
 }
+
+// Robot.prototype.exitMaze = function(steps) {
+//     if (this.maze) {
+//         while(steps != 0) {
+//             steps -= 1;
+//             if (this.canMoveForward()) {
+//                 this.moveForward();
+//                 this.turnLeft();
+//             } else {
+//                 this.turnRight();
+//             }
+//             if (this.x == this.maze.endX && this.y == this.maze.endY) {
+//                 return true;
+//             }
+//         }
+//         return false;
+//     }
+// }
