@@ -33,7 +33,7 @@
     display: block;
     position: absolute;
     width: 2em;
-    /*color: #AAA;*/
+    color:  #7CFC00;
 }
 .maze .mazeRow .mazeSpace i.robot {
     color: #292929;
