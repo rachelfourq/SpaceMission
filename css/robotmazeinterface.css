@@ -2,12 +2,13 @@
     border: 3px solid #292929;
     display: inline-block;
     vertical-align: top;
-    margin-left: 20%;
-    margin-top: 5%;
+    margin-left: 25%;
+    margin-top: 15%;
+    background-color: rgba(215, 215, 209, 0.8);
 }
 .maze .mazeRow .mazeSpace {
     display: inline-block;
-    border: 3px solid #F8F8F8;
+    border: 3px solid rgba(215, 215, 209, 0.8);
     width: 2em;
     height: 2em;
     overflow: hidden;
@@ -32,14 +33,14 @@
     display: block;
     position: absolute;
     width: 2em;
-    color: #AAA;
+    /*color: #AAA;*/
 }
 .maze .mazeRow .mazeSpace i.robot {
     color: #292929;
 }
 
 div.actions {
-    margin: 0;
+    margin-top: 15%;
     padding: 2em;
     list-style: none;
     display: inline-block;
@@ -59,6 +60,7 @@ div.actions .btn {
 }
 
 .btn {
+  margin-top: 15%;
   display: inline-block;
   *display: inline;
   padding: 4px 12px;
@@ -67,22 +69,16 @@ div.actions .btn {
   font-size: 14px;
   line-height: 20px;
   *line-height: 20px;
-  color: #333333;
+  color: white;
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
-  background-color: #f5f5f5;
-  *background-color: #e6e6e6;
+  background-color: rgba(215, 215, 209, 0.2);
   background-repeat: repeat-x;
-  border: 1px solid #bbbbbb;
-  *border: 0;
-  border-color: #e6e6e6 #e6e6e6 #bfbfbf;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  border-bottom-color: #a2a2a2;
   border-radius: 0px;
-  -webkit-box-shadow: 14px 18px 29px -12px rgba(0,0,0,0.75);
-  -moz-box-shadow: 14px 18px 29px -12px rgba(0,0,0,0.75);
-  box-shadow: 14px 18px 29px -12px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 10px 10px 11px 8px rgba(0,0,0,0.8);
+  -moz-box-shadow: 10px 10px 11px 8px rgba(0,0,0,0.8);
+  box-shadow: 10px 10px 11px 8px rgba(0,0,0,0.8);
   font-family: 'Raleway', sans-serif;
 
 }
@@ -98,9 +94,9 @@ div.actions .btn {
 }
 
 .btn:hover {
-  color: #333333;
+  color: white;
   text-decoration: none;
-  background-color: #e6e6e6;
+  background-color: grey;
   *background-color: #d9d9d9;
 
   background-position: 0 -15px;
@@ -121,4 +117,16 @@ div.actions .btn {
   -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
      -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
           box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+#page {
+    background: url(https://images.unsplash.com/photo-1449827292683-d3d9da0dde3c?crop=entropy&fit=crop&fm=jpg&h=675&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1250) no-repeat center center fixed; 
+    height: 800px;
+    width: 100%;
+    margin: 0px;
+    padding: 0;
+    background-size: cover;
+}
+
+.robot {
+  color: white;
 }

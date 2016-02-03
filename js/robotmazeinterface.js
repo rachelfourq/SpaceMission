@@ -199,7 +199,7 @@ RobotMazeInterface.prototype.renderControls = function () {
   }
 
   if (this.robot.maze != this.maze) {
-    $robot = $('<i class="robot icon-truck"></i>').appendTo($actions);
+    $robot = $('<i class="robot fa fa-rocket"></i>').appendTo($actions);
   }  
 
   return $actions;
